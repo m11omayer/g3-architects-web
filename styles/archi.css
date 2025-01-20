@@ -13,6 +13,10 @@
   main > section{
     margin-top: 130px;
   }
+  .section-title{
+    font-size: 2.8rem;
+    font-weight: 700;
+  }
 
   .display-flex{
     display: flex;
@@ -73,6 +77,7 @@
   }  
   .banner-image{
     width: 100%;
+    margin-bottom: 20px;
   }
   /*  --------- */
   .teams{
@@ -87,13 +92,64 @@
     margin-left: 130px;
     min-width: 530px;
   }
-  .feature-title{
-    font-size: 2.8rem;
-    font-weight: 700;
-  }
+ 
   #quick-list{
     font-weight: 500;
   }
+  /* some fact related styles */
+  .fact-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+
+  }
+  .fact-card{
+    border: 1px solid #FF900E;
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .fact-number{
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  .fact-namr{
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  .fact-discription{
+    max-width: 540px;
+  }
+  /* sponsorsrelated style */
+.spondor-info{
+  max-width: 540px;
+  margin: 50px auto;
+  text-align: center;
+}
+.sposor-compsniea{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+}
+.sposor-compsniea img{
+  filter: grayscale(100%);
+}
+
+
+
+
+
+
+
+
+
+
+
   /* respnsive media quary */
   @media screen and (max-width: 576px) {
     .navbar,
@@ -101,9 +157,15 @@
     .teams{
       flex-direction: column;
     }  
-
-    .team-img-containar{
+    .team-img-containar, .fact-container,.sposor-compsniea{
       grid-template-columns: repeat(1, 1fr);
+    }
+    .sposor-compsniea{
+      gap: 30px;
+
+    }
+    .fact-container{
+      justify-items: center;
     }
 
   }
@@ -111,6 +173,13 @@
   @media screen and (min-width: 576px) and (max-width:992px) {
     .teams{
       flex-direction: column;
+    }
+    .fact-container,
+    .sposor-compsniea{
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      justify-items: center;
+
     }
     .our-features{
       margin-left: 50px auto;
